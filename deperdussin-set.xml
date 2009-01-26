@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- <PropertyList include="deperdussin-jsbsim-cnf.xml"> -->
+<PropertyList include="deperdussin-yasim-cnf.xml">
+
+  <sim>
+    <description>Deperdussin Monocoque</description>
+    <author>Emmanuel BARANGER (3D/FDM/Texture)</author>
+  </sim>
+
+</PropertyList>
+

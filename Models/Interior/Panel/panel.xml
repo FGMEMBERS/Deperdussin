@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <path>panel.ac</path>
+
+  <animation>
+    <!-- Objets opaques -->
+    <object-name>panel</object-name>
+
+    <!-- Objets transparents -->
+  </animation>
+
+  <!-- Fuel -->
+  <model>
+    <path>Aircraft/Deperdussin/Models/Interior/Panel/Instruments/fuel/fuel.xml</path>
+    <offsets>
+      <x-m>  0.047 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m> -0.031 </z-m>
+      <roll-deg>    0.000 </roll-deg>
+      <pitch-deg>   0.000 </pitch-deg>
+      <heading-deg> 0.000 </heading-deg>
+    </offsets>
+  </model>
+
+  <!-- Compass -->
+  <model>
+    <path>Aircraft/Deperdussin/Models/Interior/Panel/Instruments/compass/compass.xml</path>
+    <offsets>
+      <x-m>  0.115 </x-m>
+      <y-m> -0.275 </y-m>
+      <z-m> -0.090 </z-m>
+      <roll-deg>    0.000 </roll-deg>
+      <pitch-deg>   0.000 </pitch-deg>
+      <heading-deg> 0.000 </heading-deg>
+    </offsets>
+  </model>
+
+  <!-- ASI -->
+  <model>
+    <path>Aircraft/Deperdussin/Models/Interior/Panel/Instruments/asi/asi.xml</path>
+    <offsets>
+      <x-m>  0.060 </x-m>
+      <y-m>  0.270 </y-m>
+      <z-m>  0.130 </z-m>
+      <roll-deg>      0.000 </roll-deg>
+      <pitch-deg>   -15.000 </pitch-deg>
+      <heading-deg> -25.000 </heading-deg>
+    </offsets>
+  </model>
+
+</PropertyList>

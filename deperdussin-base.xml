@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <sim include="Nasal/views.xml">
+
+    <author>Emmanuel BARANGER (3D/FDM/Texture)</author>
+    <aircraft-version>0.2</aircraft-version>
+    <status>Alpha</status>
+
+    <fuel-fraction>1.0</fuel-fraction>
+
+    <startup>
+      <splash-texture>Aircraft/Deperdussin/deperdussin-splash.png</splash-texture>
+    </startup>
+
+    <sound>
+      <path archive="y">Aircraft/Deperdussin/Sounds/deperdussin-sound.xml</path>
+    </sound>
+
+    <model>
+      <path archive="y">Aircraft/Deperdussin/Models/deperdussin.xml</path>
+      <livery>
+        <file type="string">default</file>
+      </livery>
+    </model>
+
+    <multiplay>
+      <chat_display>1</chat_display>
+      <generic>
+        <int type="int" n="0">0</int>
+        <int type="int" n="1">0</int>
+        <int type="int" n="2">0</int>
+        <int type="int" n="3">0</int>
+        <int type="int" n="4">0</int>
+        <int type="int" n="5">0</int>
+      </generic>
+    </multiplay> 
+
+    <help>
+      <title>Deperdussin</title>
+      <key>
+        <name>d</name>
+        <desc>Open/Close crew doors</desc>
+      </key>
+      <line>----------------------------------------------</line>
+      <key>
+        <name>D</name>
+        <desc>Open/Close passagers doors</desc>
+      </key>
+      <line>----------------------------------------------</line>
+      <key>
+        <name>Ctrl d</name>
+        <desc>Open/Close engine doors</desc>
+      </key>
+      <line>______________________________________________</line>
+    </help>
+
+    <menubar include="Dialogs/deperdussin-menu.xml"/>
+
+  </sim>
+
+  <controls>
+    <engines>
+      <engine>
+        <mixture archive="y"> 0.65 </mixture>
+      </engine>
+    </engines>
+  </controls> 
+
+  <input>
+    <keyboard include="Nasal/deperdussin-keyboard.xml"/>
+  </input>
+
+  <nasal>
+    <sv4>
+      <file>Aircraft/Deperdussin/Nasal/doors.nas</file>
+      <file>Aircraft/Deperdussin/Nasal/deperdussin.nas</file>
+      <file>Aircraft/Deperdussin/Nasal/liveries.nas</file>
+    </sv4>
+  </nasal>
+
+</PropertyList>
+

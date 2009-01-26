@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <path>asi.ac</path>
+
+  <animation>
+    <!-- Objets opaques -->
+    <object-name>fond</object-name>
+    <object-name>needle</object-name>
+
+    <!-- Objets transparents -->
+    <object-name>vitre</object-name>
+  </animation>
+
+  <animation>
+    <type>noshadow</type>
+    <object-name>vitre</object-name>
+  </animation>
+
+  <animation>
+    <type>shader</type>
+    <shader>chrome</shader>
+    <texture>glass.png</texture>
+    <object-name>vitre</object-name>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>needle</object-name>
+    <property>/instrumentation/airspeed-indicator/indicated-speed-kt</property>
+    <factor> 1.852 </factor>
+    <interpolation>
+      <entry><ind>   0 </ind><dep>   0 </dep></entry>
+      <entry><ind>  40 </ind><dep>  18 </dep></entry>
+      <entry><ind>  60 </ind><dep>  41 </dep></entry>
+      <entry><ind>  80 </ind><dep>  75 </dep></entry>
+      <entry><ind> 100 </ind><dep> 107 </dep></entry>
+      <entry><ind> 120 </ind><dep> 140 </dep></entry>
+      <entry><ind> 140 </ind><dep> 172 </dep></entry>
+      <entry><ind> 180 </ind><dep> 218 </dep></entry>
+      <entry><ind> 220 </ind><dep> 259 </dep></entry>
+      <entry><ind> 260 </ind><dep> 298 </dep></entry>
+      <entry><ind> 300 </ind><dep> 337 </dep></entry>
+    </interpolation>
+    <axis>
+      <x> -1 </x>
+      <y>  0 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+</PropertyList>
+
