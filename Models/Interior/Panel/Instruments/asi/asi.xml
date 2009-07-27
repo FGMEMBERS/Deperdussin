@@ -29,19 +29,18 @@
     <type>rotate</type>
     <object-name>needle</object-name>
     <property>/instrumentation/airspeed-indicator/indicated-speed-kt</property>
-    <factor> 1.852 </factor>
     <interpolation>
-      <entry><ind>   0 </ind><dep>   0 </dep></entry>
-      <entry><ind>  40 </ind><dep>  18 </dep></entry>
-      <entry><ind>  60 </ind><dep>  41 </dep></entry>
-      <entry><ind>  80 </ind><dep>  75 </dep></entry>
-      <entry><ind> 100 </ind><dep> 107 </dep></entry>
-      <entry><ind> 120 </ind><dep> 140 </dep></entry>
-      <entry><ind> 140 </ind><dep> 172 </dep></entry>
-      <entry><ind> 180 </ind><dep> 218 </dep></entry>
-      <entry><ind> 220 </ind><dep> 259 </dep></entry>
-      <entry><ind> 260 </ind><dep> 298 </dep></entry>
-      <entry><ind> 300 </ind><dep> 337 </dep></entry>
+      <entry><ind>   0.00 </ind><dep>   0 </dep></entry> <!--   0 km/h -->
+      <entry><ind>  21.60 </ind><dep>  18 </dep></entry> <!--  20 km/h -->
+      <entry><ind>  32.40 </ind><dep>  41 </dep></entry> <!--  40 km/h -->
+      <entry><ind>  43.20 </ind><dep>  75 </dep></entry> <!--  60 km/h -->
+      <entry><ind>  54.00 </ind><dep> 107 </dep></entry> <!-- 100 km/h -->
+      <entry><ind>  64.80 </ind><dep> 140 </dep></entry> <!-- 120 km/h -->
+      <entry><ind>  75.60 </ind><dep> 172 </dep></entry> <!-- 140 km/h -->
+      <entry><ind>  97.20 </ind><dep> 218 </dep></entry> <!-- 180 km/h -->
+      <entry><ind> 118.80 </ind><dep> 259 </dep></entry> <!-- 220 km/h -->
+      <entry><ind> 140.40 </ind><dep> 298 </dep></entry> <!-- 260 km/h -->
+      <entry><ind> 162.00 </ind><dep> 337 </dep></entry> <!-- 300 km/h -->
     </interpolation>
     <axis>
       <x> -1 </x>
