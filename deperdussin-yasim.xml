@@ -1,55 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- Stampe SV 4 B : 2009 Emmanuel BARANGER
-                 
-     Envergure  : 6.65 m   -> 21 ft 9.75 in
-     Longueur   : 6.10 m   -> 20 ft
-     Hauteur    : 2.30 m   ->  7 ft 6.5 in
-     Poids vide : 612 kg   -> 1350 lb
-     Moteur     : Gnome 14 cyl rotatif (160 ch)
-     Vitesse    : Max 200 km/h -> 108 kts, croisère 140 km/h -> 75.59 kts
+<!--
+  Deperdussin   - 2010 Emmanuel BARANGER 
+
+  source        : http://en.wikipedia.org/wiki/Deperdussin_Monocoque
+
+  Wingspan      : 8.95 m    (  29 ft 04 in )
+  lenght        : 5.75 m    (  18 ft 10 in )
+  Empty mass    :  400 kg   ( 880 lb)
+  Engine        : Gnome rotary 160 hp
+  Maximum speed :  210 km/h (  113 kts )
 -->
 
-<airplane mass="1146" >
+<airplane mass="880" >
 
-  <approach speed="46" aoa="19" fuel="0.2">
+  <approach speed="35" aoa="8" fuel="0.3">
     <control-setting axis="/controls/engines/engine[0]/throttle" value="0.2"/>
-    <control-setting axis="/controls/engines/engine[0]/mixture" value="0.65"/> <!-- Ground adjustment only -->
+    <control-setting axis="/controls/engines/engine[0]/mixture" value="0.65"/>
   </approach>
   
-  <cruise speed="108" alt="5000" fuel="0.5" >
+<!-- <control-setting axis="/controls/flight/elevator-trim" value="0.16"/> -->
+  <cruise speed="107" alt="5000" fuel="0.7" >
     <control-setting axis="/controls/engines/engine[0]/throttle" value="1.0" />
-    <control-setting axis="/controls/engines/engine[0]/mixture" value="0.65" /> <!-- Ground adjustment only -->
-    <control-setting axis="/controls/flight/elevator-trim" value="0.16"/>
+    <control-setting axis="/controls/engines/engine[0]/mixture" value="0.65" />
   </cruise>
 
   <cockpit x="0.760" y="0.00" z="0.733"/>
 
-  <fuselage ax="3.068" ay="0" az="0.272" bx="-3.054" by="0" bz="0.444" width="1.021" taper="0.2" midpoint="0.5"/>
+  <fuselage ax="2.630" ay="0" az="0.272" bx="-2.550" by="0" bz="0.346" width="0.820" taper="0.2" midpoint="0.01"/>
 
   <!-- Wing -->
   <wing x="1.461" y="0.350" z="0.517" 
         chord="1.601" 
         length="2.953" 
-        incidence="4"
         taper="1" 
-        camber="0.001">
-        <stall aoa="25" width="3.0" peak="1.5"/>
-        <flap1 start="0.328" end="0.890" lift="1.2" drag="1.1"/>
+        camber="0.03">
+        <stall aoa="19" width="1" peak="1.4"/>
+        <flap0 start="0.5" end="1" lift="1.2" drag="1.1"/>
       
-        <control-input axis="/controls/flight/aileron" control="FLAP1" split="true"/>
-        <control-input axis="/controls/flight/aileron-trim" control="FLAP1" split="true"/>
+        <control-input axis="/controls/flight/aileron" control="FLAP0" split="true"/>
+        <control-input axis="/controls/flight/aileron-trim" control="FLAP0" split="true"/>
       
-        <control-output control="FLAP1" side="left" prop="/surface-positions/left-aileron-pos-norm"/>
-        <control-output control="FLAP1" side="right" prop="/surface-positions/right-aileron-pos-norm"/>
+        <control-output control="FLAP0" side="left" prop="/surface-positions/left-aileron-pos-norm"/>
+        <control-output control="FLAP0" side="right" prop="/surface-positions/right-aileron-pos-norm"/>
+        <control-output control="FLAP0" prop="/surface-positions/aileron-pos-norm"/>
   </wing>
 
   <hstab x="-2.041" y="0.0" z="0.341" 
 	 chord="1.927" 
-	 length="0.994" 
-         taper="0.38"> 
-         <stall aoa="16" width="8" peak="1.5"/>
-         <flap0 start="0.0" end="1.6" lift="1.55" drag="1.2"/>
+	 length="1.2"
+         sweep="32" 
+         taper="0.35"> 
+         <stall aoa="19" width="1" peak="1.4"/>
+         <flap0 start="0" end="1" lift="1.4" drag="1.2"/>
 
          <control-input axis="/controls/flight/elevator" control="FLAP0"/>
          <control-input axis="/controls/flight/elevator-trim" control="FLAP0"/>
@@ -57,12 +60,13 @@
          <control-output control="FLAP0" prop="/surface-positions/elevator-pos-norm"/>
   </hstab>
 
-  <vstab x="-2.746" y="0" z="0.002" 
+  <vstab x="-2.317" y="0" z="0.214" 
 	 chord="1.479" 
-	 length="0.726" 
+	 length="0.92"
+         sweep="40" 
          taper="0.16">
-         <stall aoa="14" width="4" peak="1.5"/>
-         <flap0 start="0" end="1" lift="1.6" drag="1.2"/>
+         <stall aoa="16" width="1" peak="1.4"/>
+         <flap0 start="0" end="1" lift="1.2" drag="1.1"/>
 
          <control-input axis="/controls/flight/rudder" square="true" control="FLAP0" invert="true"/>
          <control-input axis="/controls/flight/rudder-trim" control="FLAP0" invert="true"/>
@@ -70,32 +74,34 @@
          <control-output control="FLAP0" prop="/surface-positions/rudder-pos-norm" min="1" max="-1"/>
   </vstab>
 
-  <!-- engine    : Gnome 14 cyl rotatif (160 ch)
-       propeller : 
-  =================================================================================
-                                         Rayon * Rayon * Mass(kg)      1.14 * 1.14 * 155
-                 moment d'après la doc : ________________________ = __________________ = 67.146
-                                                     3                      3  -->
+  <!--  Gnome rotary 160 hp
+                 source       : http://www.enginehistory.org/Gnome%20Monosoupape.pdf
+
+                 type         : 9-cylinder version
+                 power        : 160 hp
+                 weight       : 150 kg  ( 330 lb )
+                 Displacement : 970 cm3
+                 Compression  : 5.45:1
+  -->
   <propeller x="2.457" y="0.0" z="0.272"  
-             mass="342"       
+             mass="330"       
              radius="1.14"
-             moment="67.146"
-             cruise-power="130"
+             moment="5.3"
+             cruise-power="150"
              cruise-alt="5000" 
-             cruise-speed="75"
-             cruise-rpm="2100"
+             cruise-speed="107"
+             cruise-rpm="1100"
              takeoff-power="160"
-             takeoff-rpm="2450">
-             <piston-engine eng-rpm="2450" 
-                            alt="5000" 
+             takeoff-rpm="14300">
+             <piston-engine eng-rpm="1300" 
                             eng-power="160"
-                            displacement="384" 
-                            compression="5.8"/>
+                            displacement="970" 
+                            compression="5.45"/>
              <actionpt x="2.823" y="0.0" z="0.272" />
-             <control-input control="THROTTLE" axis="/controls/engines/engine[0]/throttle"/>
-             <control-input control="STARTER" axis="/controls/engines/engine[0]/starter"/>
              <control-input control="MAGNETOS" axis="/controls/engines/engine[0]/magnetos"/>
-             <control-input control="MIXTURE" axis="/controls/engines/engine[0]/mixture"/> <!-- Ground adjustment only -->
+             <control-input control="STARTER" axis="/controls/engines/engine[0]/starter"/>
+             <control-input control="MIXTURE" axis="/controls/engines/engine[0]/mixture"/>
+             <control-input control="THROTTLE" axis="/controls/engines/engine[0]/throttle"/>
 
   </propeller>
 
@@ -104,7 +110,7 @@
         compression="0.15" 
         spring="1.8" 
         damp="0.3" 
-        on-solid="1" >
+        on-solid="1">
         <control-input axis="/controls/gear/brake-left" control="BRAKE" split="true"/>
         <control-input axis="/controls/gear/brake-parking" control="BRAKE" split="true"/>
   </gear>
@@ -114,7 +120,7 @@
         compression="0.15" 
         spring="1.8"
         damp="0.3" 
-        on-solid="1" >
+        on-solid="1">
         <control-input axis="/controls/gear/brake-right" control="BRAKE" split="true"/>
         <control-input axis="/controls/gear/brake-parking" control="BRAKE" split="true"/>
   </gear>
@@ -126,13 +132,12 @@
         on-solid="1"
         sfric="1"
         dfric="1">
-        <control-input axis="/controls/flight/rudder" control="STEER" src0="-1.0" src1="1.0" dst0="0.5" dst1="-0.5"/>
   </gear>
 
   <!-- Fuel: Forward 142 lbs -->
-  <tank x="1.824" y="0" z="1.162" capacity="142"/>
+  <tank x="1.824" y="0" z="0" capacity="142"/>
   
-  <!-- CG théorique x=1.421 y=0.0 z=0.517 -->
-  <ballast x="0" y="0.0" z="-2" mass="400" />
+  <!-- CG -->
+  <ballast x="1" y="0" z="-2" mass="400" />
 
 </airplane>

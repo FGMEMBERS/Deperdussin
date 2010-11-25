@@ -21,7 +21,7 @@
   <animation>
     <type>shader</type>
     <shader>chrome</shader>
-    <texture>shader.png</texture>
+    <texture>Aircraft/Generic/Effects/glass_shader.png</texture>
     <object-name>intvitres</object-name>
   </animation>
 
@@ -38,7 +38,7 @@
       <y-m>  0.000 </y-m>
       <z-m>  0.639 </z-m>
     </offsets>
-  </model> -->
+  </model>
 
   <!-- Pilote -->
   <model>
@@ -61,17 +61,17 @@
   <animation>
     <type>rotate</type>
     <object-name>VolantComplet</object-name>
-    <property>/controls/flight/elevator</property>
-    <factor>-15</factor>
+    <property>surface-positions/elevator-pos-norm</property>
+    <factor> -15 </factor>
     <center>
       <x-m> -1.007 </x-m>
       <y-m>  0.000 </y-m>
       <z-m>  0.079 </z-m>
     </center>
     <axis>
-      <x> 0.000 </x>
-      <y> 1.000 </y>
-      <z> 0.000 </z>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
     </axis>
   </animation>
 
@@ -79,24 +79,24 @@
   <animation>
     <type>rotate</type>
     <object-name>volant</object-name>
-    <property>/controls/flight/aileron</property>
-    <factor>-70</factor>
+    <property>surface-positions/aileron-pos-norm</property>
+    <factor> -70 </factor>
     <center>
       <x-m> -0.952 </x-m>
       <y-m>  0.000 </y-m>
       <z-m>  0.519 </z-m>
     </center>
     <axis>
-      <x> 1.000 </x>
-      <y> 0.000 </y>
-      <z> 0.000 </z>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
     </axis>
   </animation>
 
   <animation>
     <type>rotate</type>
     <object-name>pedaleG</object-name>
-    <property>/controls/flight/rudder</property>
+    <property>surface-positions/rudder-pos-norm</property>
     <interpolation>
       <entry><ind> -1 </ind><dep> -45 </dep></entry>
       <entry><ind>  1 </ind><dep>  30 </dep></entry>
@@ -107,16 +107,16 @@
       <z-m> -0.021 </z-m>
     </center>
     <axis>
-      <x> 0.000 </x>
-      <y> 1.000 </y>
-      <z> 0.000 </z>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
     </axis>
   </animation> 
 
   <animation>
     <type>rotate</type>
     <object-name>pedaleD</object-name>
-    <property>/controls/flight/rudder</property>
+    <property>surface-positions/rudder-pos-norm</property>
     <interpolation>
       <entry><ind> -1 </ind><dep>  45 </dep></entry>
       <entry><ind>  1 </ind><dep> -30 </dep></entry>
@@ -127,10 +127,11 @@
       <z-m> -0.021 </z-m>
     </center>
     <axis>
-      <x> 0.000 </x>
-      <y> 1.000 </y>
-      <z> 0.000 </z>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
     </axis>
   </animation> 
 
 </PropertyList>
+

@@ -10,7 +10,7 @@ data 10
 avantbrasD
 texture "ww1_pilot_old.png"
 texrep 1 1
-crease 30.000000
+crease 180.000000
 numvert 35
 -0.062707 0.373862 -0.076127
 0.037511 0.408462 -0.210898
@@ -261,7 +261,7 @@ data 10
 avantbrasG
 texture "ww1_pilot_old.png"
 texrep 1 1
-crease 30.000000
+crease 180.000000
 numvert 183
 0.002459 0.322462 0.188553
 -0.176641 0.330962 0.238553
@@ -1767,7 +1767,7 @@ data 5
 brasD
 texture "ww1_pilot_old.png"
 texrep 1 1
-crease 30.000000
+crease 180.000000
 numvert 22
 0.269259 0.519262 -0.199286
 0.350059 0.491362 -0.198786
@@ -1949,7 +1949,7 @@ data 5
 brasG
 texture "ww1_pilot_old.png"
 texrep 1 1
-crease 30.000000
+crease 180.000000
 numvert 32
 0.363364 0.60751 0.202853
 0.372676 0.544667 0.234953
@@ -2191,7 +2191,7 @@ data 5
 corps
 texture "ww1_pilot_old.png"
 texrep 1 1
-crease 30.000000
+crease 180.000000
 numvert 358
 0.119059 0.337562 0.024053
 0.116859 0.332762 0.068253
@@ -4330,7 +4330,7 @@ data 11
 cuisseD.001
 texture "ww1_pilot_old.png"
 texrep 1 1
-crease 30.000000
+crease 180.000000
 numvert 30
 -0.164416 0.280282 -0.080049
 -0.158957 0.245197 -0.01498
@@ -4538,7 +4538,7 @@ data 7
 cuisseD
 texture "ww1_pilot_old.png"
 texrep 1 1
-crease 30.000000
+crease 180.000000
 numvert 30
 -0.127289 0.231399 0.212753
 0.1626 0.261498 0.202053
@@ -4739,7 +4739,7 @@ data 6
 jambeD
 texture "ww1_pilot_old.png"
 texrep 1 1
-crease 30.000000
+crease 180.000000
 numvert 112
 -0.17984 0.181917 -0.066624
 -0.154323 0.203253 -0.061224
@@ -5572,7 +5572,7 @@ data 6
 jambeG
 texture "ww1_pilot_old.png"
 texrep 1 1
-crease 30.000000
+crease 180.000000
 numvert 112
 -0.149809 0.194447 0.139253
 -0.130022 0.222645 0.144553
@@ -6405,7 +6405,7 @@ data 8
 lunettes
 texture "ww1_pilot_old.png"
 texrep 1 1
-crease 30.000000
+crease 180.000000
 numvert 159
 0.146125 0.761093 -0.054675
 0.153238 0.762961 -0.056075
@@ -7500,7 +7500,7 @@ data 10
 lunettesTr
 texture "transp.png"
 texrep 1 1
-crease 30.000000
+crease 180.000000
 numvert 30
 0.124874 0.804113 0.052725
 0.126923 0.783354 0.070725
@@ -7652,7 +7652,7 @@ data 6
 manche
 texture "ww1_pilot_old.png"
 texrep 1 1
-crease 30.000000
+crease 180.000000
 numvert 342
 -0.077341 0.442882 -0.004021
 -0.077541 0.446678 -0.005921
@@ -10239,7 +10239,7 @@ data 5
 piedD
 texture "ww1_pilot_old.png"
 texrep 1 1
-crease 30.000000
+crease 180.000000
 numvert 51
 -0.653967 0.126434 -0.087722
 -0.655513 0.128113 -0.078022
@@ -10586,7 +10586,7 @@ data 5
 piedG
 texture "ww1_pilot_old.png"
 texrep 1 1
-crease 30.000000
+crease 180.000000
 numvert 51
 -0.646438 0.147747 0.196692
 -0.637227 0.137098 0.207292
@@ -10933,7 +10933,7 @@ data 5
 siege
 texture "ww1_pilot_old.png"
 texrep 1 1
-crease 30.000000
+crease 180.000000
 numvert 68
 0.212259 0.100262 -0.166382
 0.207259 0.106862 0.157266
@@ -11491,7 +11491,7 @@ data 4
 tete
 texture "ww1_pilot_old.png"
 texrep 1 1
-crease 30.000000
+crease 180.000000
 numvert 703
 0.315755 0.845013 -0.046756
 0.315589 0.865518 -0.039256

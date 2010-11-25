@@ -39,20 +39,6 @@
 
     <help>
       <title>Deperdussin</title>
-      <key>
-        <name>d</name>
-        <desc>Open/Close crew doors</desc>
-      </key>
-      <line>----------------------------------------------</line>
-      <key>
-        <name>D</name>
-        <desc>Open/Close passagers doors</desc>
-      </key>
-      <line>----------------------------------------------</line>
-      <key>
-        <name>Ctrl d</name>
-        <desc>Open/Close engine doors</desc>
-      </key>
       <line>______________________________________________</line>
     </help>
 
@@ -60,24 +46,17 @@
 
   </sim>
 
-  <controls>
-    <engines>
-      <engine>
-        <mixture archive="y"> 0.65 </mixture>
-      </engine>
-    </engines>
-  </controls> 
-
   <input>
     <keyboard include="Nasal/deperdussin-keyboard.xml"/>
   </input>
 
   <nasal>
-    <sv4>
+    <doors>
       <file>Aircraft/Deperdussin/Nasal/doors.nas</file>
-      <file>Aircraft/Deperdussin/Nasal/deperdussin.nas</file>
+    </doors>
+    <deperdussin>
       <file>Aircraft/Deperdussin/Nasal/liveries.nas</file>
-    </sv4>
+    </deperdussin>
   </nasal>
 
 </PropertyList>
