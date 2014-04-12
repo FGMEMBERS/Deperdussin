@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="ISO-8859-1"?>
 
 <PropertyList>
 
@@ -13,9 +13,9 @@
       var float_0 = self.getNode("sim/multiplay/generic/float[0]", 1);
       var float_1 = self.getNode("sim/multiplay/generic/float[1]", 1);
       
-      var crew_door = self.getNode("instrumentation/doors/crew/position-norm", 1);
-      var passenger_door = self.getNode("instrumentation/doors/passenger/position-norm", 1);
-    
+      var crew_door = self.getNode("sim/model/door-positions/crew/position-norm", 1);
+      var passenger_door = self.getNode("sim/model/door-positions/passenger/position-norm", 1);
+      
       crew_door.alias(float_0);
       passenger_door.alias(float_1);
     </load>
@@ -33,6 +33,18 @@
     <object-name>capot</object-name>
     <object-name>bol</object-name>
     <object-name>ailes</object-name>
+    <object-name>ailesG1</object-name>
+    <object-name>ailesG2</object-name>
+    <object-name>ailesG3</object-name>
+    <object-name>ailesstructG1</object-name>
+    <object-name>ailesstructG2</object-name>
+    <object-name>ailesstructG3</object-name>
+    <object-name>ailesstructD3</object-name>
+    <object-name>ailesstructD2</object-name>
+    <object-name>ailesstructD1</object-name>
+    <object-name>ailesD3</object-name>
+    <object-name>ailesD2</object-name>
+    <object-name>ailesD1</object-name>
     <object-name>intcapot</object-name>
     <object-name>armature</object-name>
     <object-name>derive</object-name>
@@ -44,37 +56,17 @@
     <object-name>direction</object-name>
     <object-name>helice</object-name>
     <object-name>pate</object-name>
-    <object-name>moteur</object-name>
     <object-name>trous</object-name>
     <object-name>reservoir</object-name>
     <object-name>nervures</object-name>
-
+    <object-name>tringleProfH</object-name>
+    <object-name>tringleProfB</object-name>
+    <object-name>tringleDirG</object-name>
+    <object-name>tringleDirD</object-name>
+    <object-name>cables</object-name>
+    
     <!-- Objets transparents -->
     <object-name>vitres</object-name>
-    <object-name>cables</object-name>
-    <object-name>tringleProfH</object-name>
-    <object-name>tringleProfB</object-name>
-    <object-name>tringleDirG</object-name>
-    <object-name>tringleDirD</object-name>
-    <object-name>propdisc</object-name>
-    <object-name>propblur</object-name>
-  </animation>
-
-  <animation>
-    <type>shader</type>
-    <shader>chrome</shader>
-    <texture>Aircraft/Generic/Effects/glass_shader.png</texture>
-    <object-name>vitres</object-name>
-  </animation>
-
-  <animation>
-    <type>noshadow</type>
-    <object-name>vitres</object-name>
-    <object-name>cables</object-name>
-    <object-name>tringleProfH</object-name>
-    <object-name>tringleProfB</object-name>
-    <object-name>tringleDirG</object-name>
-    <object-name>tringleDirD</object-name>
     <object-name>propdisc</object-name>
     <object-name>propblur</object-name>
   </animation>
@@ -85,6 +77,18 @@
     <object-name>capot</object-name>
     <object-name>bol</object-name>
     <object-name>ailes</object-name>
+    <object-name>ailesG1</object-name>
+    <object-name>ailesG2</object-name>
+    <object-name>ailesG3</object-name>
+    <object-name>ailesstructG1</object-name>
+    <object-name>ailesstructG2</object-name>
+    <object-name>ailesstructG3</object-name>
+    <object-name>ailesstructD3</object-name>
+    <object-name>ailesstructD2</object-name>
+    <object-name>ailesstructD1</object-name>
+    <object-name>ailesD3</object-name>
+    <object-name>ailesD2</object-name>
+    <object-name>ailesD1</object-name>
     <object-name>intcapot</object-name>
     <object-name>armature</object-name>
     <object-name>derive</object-name>
@@ -96,55 +100,96 @@
     <object-name>direction</object-name>
     <object-name>helice</object-name>
     <object-name>pate</object-name>
-    <object-name>moteur</object-name>
     <object-name>trous</object-name>
     <object-name>reservoir</object-name>
     <object-name>nervures</object-name>
-
+    <object-name>tringleProfH</object-name>
+    <object-name>tringleProfB</object-name>
+    <object-name>tringleDirG</object-name>
+    <object-name>tringleDirD</object-name>
+    <object-name>cables</object-name>
+    
     <property-base>sim/model/livery</property-base>
     <texture-prop>texture</texture-prop>
     <texture>texture.png</texture>
-<!--
-    <diffuse>
-      <red-prop>diffuse/red</red-prop>
-      <green-prop>diffuse/green</green-prop>
-      <blue-prop>diffuse/blue</blue-prop>
-    </diffuse>
-
-    <ambient>
-      <red-prop>ambient/red</red-prop>
-      <green-prop>ambient/green</green-prop>
-      <blue-prop>ambient/blue</blue-prop>
-    </ambient>
--->
     <specular>
       <red-prop>specular/red</red-prop>
       <green-prop>specular/green</green-prop>
       <blue-prop>specular/blue</blue-prop>
     </specular>
-
-    <emission>
-      <red-prop>emission/red</red-prop>
-      <green-prop>emission/green</green-prop>
-      <blue-prop>emission/blue</blue-prop>
-    </emission>
-<!--
-    <shininess>
-      <shininess-prop>shininess</shininess-prop>
-    </shininess>
--->
   </animation>
 
+  <!-- working for Rembrandt -->
+  <effect>
+    <inherits-from>Aircraft/Deperdussin/Models/Effects/Glass/glass</inherits-from>
+    <object-name>vitres</object-name>
+  </effect>
+  
+  <effect>
+    <inherits-from>Effects/model-transparent</inherits-from>
+    <object-name>vitres</object-name>
+  </effect>
+  
+  <!-- Une ombre pour OSG -->
+  <model>
+    <path>Aircraft/Deperdussin/Models/shadow.xml</path>
+    <offsets>
+      <x-m>  0.0 </x-m>
+      <y-m>  0.0 </y-m>
+      <z-m> -0.8 </z-m>
+    </offsets>
+  </model>
+  
+  <!-- Engine -->
+  <model>
+    <path>Aircraft/Deperdussin/Models/Engine/engine.xml</path>
+    <offsets>
+      <x-m> -2.48467 </x-m>
+      <y-m>  0.00000 </y-m>
+      <z-m>  0.27207 </z-m>
+    </offsets>
+  </model>
+  
   <!-- Interieur -->
   <model>
     <path>Aircraft/Deperdussin/Models/Interior/interior.xml</path>
-    <offsets>
-      <x-m> 0 </x-m>
-      <y-m> 0 </y-m>
-      <z-m> 0 </z-m>
-    </offsets>
   </model>
 
+  <model>
+    <path>Aircraft/Deperdussin/Models/Effects/cranking/all-cranking.xml</path>
+  </model>
+  
+  <!-- Effets sur le sol -->
+  <!-- Left wheel -->
+  <model>
+    <path>Aircraft/Deperdussin/Models/Effects/ground/ground0.xml</path>
+    <offsets>
+      <x-m> -1.732 </x-m>
+      <y-m> -0.662 </y-m>
+      <z-m> -1.137 </z-m>
+    </offsets>
+  </model>
+  
+  <!-- Right wheel -->
+  <model>
+    <path>Aircraft/Deperdussin/Models/Effects/ground/ground1.xml</path>
+    <offsets>
+      <x-m> -1.732 </x-m>
+      <y-m>  0.662 </y-m>
+      <z-m> -1.137 </z-m>
+    </offsets>
+  </model>
+  
+  <!-- Rear -->
+  <model>
+    <path>Aircraft/Deperdussin/Models/Effects/ground/ground2.xml</path>
+    <offsets>
+      <x-m>  2.511 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m> -0.159 </z-m>
+    </offsets>
+  </model>
+  
   <!-- L'hélice --> 
   <animation>
     <name>HeliceComplete</name>
@@ -190,7 +235,7 @@
     <condition>
       <less-than>
         <property>engines/engine[0]/rpm</property>
-	<value>900</value>
+        <value>900</value>
       </less-than>
     </condition>
   </animation>
@@ -198,6 +243,12 @@
   <animation>
     <type>spin</type>
     <object-name>HeliceComplete</object-name>
+    <condition>
+      <greater-than>
+        <property>engines/engine[0]/rpm</property>
+        <value> 5 </value>
+      </greater-than>
+    </condition>
     <property>engines/engine[0]/rpm</property>
     <factor> 1 </factor>
     <center>
@@ -330,6 +381,147 @@
     </axis>
   </animation> 
 
+  <!-- Gauchissement des ailes -->
+  <!-- Gauche -->
+  <animation>
+    <name>AileronGaucheComplet</name>
+    <object-name>ailesstructG1</object-name>
+    <object-name>ailesstructG2</object-name>
+    <object-name>ailesstructG3</object-name>
+    <object-name>ailesG1</object-name>
+    <object-name>ailesG2</object-name>
+    <object-name>ailesG3</object-name>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>AileronGaucheComplet</object-name>
+    <property>surface-positions/left-aileron-pos-norm</property>
+    <factor> 1.5 </factor>
+    <axis>
+      <x1-m> -2.01671 </x1-m>
+      <y1-m> -3.32329 </y1-m>
+      <z1-m>  0.55941 </z1-m>
+      <x2-m> -0.66029 </x2-m>
+      <y2-m> -0.92333 </y2-m>
+      <z2-m>  0.41689 </z2-m>
+    </axis>
+  </animation>
+  
+  <animation>
+    <name>SousAileronGauche1</name>
+    <object-name>ailesstructG2</object-name>
+    <object-name>ailesstructG3</object-name>
+    <object-name>ailesG2</object-name>
+    <object-name>ailesG3</object-name>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>SousAileronGauche1</object-name>
+    <property>surface-positions/left-aileron-pos-norm</property>
+    <factor> 2.5 </factor>
+    <axis>
+      <x1-m> -1.49648 </x1-m>
+      <y1-m> -3.27166 </y1-m>
+      <z1-m>  0.52384 </z1-m>
+      <x2-m> -0.66029 </x2-m>
+      <y2-m> -1.79206 </y2-m>
+      <z2-m>  0.41689 </z2-m>
+    </axis>
+  </animation>
+  
+  <animation>
+    <name>SousAileronGauche2</name>
+    <object-name>ailesstructG3</object-name>
+    <object-name>ailesG3</object-name>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>SousAileronGauche2</object-name>
+    <property>surface-positions/left-aileron-pos-norm</property>
+    <factor> 3.5 </factor>
+    <axis>
+      <x1-m> -1.04268 </x1-m>
+      <y1-m> -3.22128 </y1-m>
+      <z1-m>  0.48343 </z1-m>
+      <x2-m> -0.66029 </x2-m>
+      <y2-m> -2.53436 </y2-m>
+      <z2-m>  0.41689 </z2-m>
+    </axis>
+  </animation>
+  
+  <!-- Droit -->
+  <animation>
+    <name>AileronDroitComplet</name>
+    <object-name>ailesstructD1</object-name>
+    <object-name>ailesstructD2</object-name>
+    <object-name>ailesstructD3</object-name>
+    <object-name>ailesD1</object-name>
+    <object-name>ailesD2</object-name>
+    <object-name>ailesD3</object-name>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>AileronDroitComplet</object-name>
+    <property>surface-positions/right-aileron-pos-norm</property>
+    <factor> 1.5 </factor>
+    <axis>
+      <x1-m> -0.66029 </x1-m>
+      <y1-m>  0.92333 </y1-m>
+      <z1-m>  0.41689 </z1-m>
+      <x2-m> -2.01671 </x2-m>
+      <y2-m>  3.32329 </y2-m>
+      <z2-m>  0.55941 </z2-m>
+    </axis>
+  </animation>
+  
+  <animation>
+    <name>SousAileronDroit1</name>
+    <object-name>ailesstructD2</object-name>
+    <object-name>ailesstructD3</object-name>
+    <object-name>ailesD2</object-name>
+    <object-name>ailesD3</object-name>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>SousAileronDroit1</object-name>
+    <property>surface-positions/right-aileron-pos-norm</property>
+    <factor> 2.5 </factor>
+    <axis>
+      <x1-m> -0.66029 </x1-m>
+      <y1-m>  1.79206 </y1-m>
+      <z1-m>  0.41689 </z1-m>
+      <x2-m> -1.49648 </x2-m>
+      <y2-m>  3.27166 </y2-m>
+      <z2-m>  0.52384 </z2-m>
+    </axis>
+  </animation>
+  
+  <animation>
+    <name>SousAileronDroit2</name>
+    <object-name>ailesstructD3</object-name>
+    <object-name>ailesD3</object-name>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>SousAileronDroit2</object-name>
+    <property>surface-positions/right-aileron-pos-norm</property>
+    <factor> 3.5 </factor>
+    <axis>
+      <x1-m> -0.66029 </x1-m>
+      <y1-m>  2.53436 </y1-m>
+      <z1-m>  0.41689 </z1-m>
+      <x2-m> -1.04268 </x2-m>
+      <y2-m>  3.22128 </y2-m>
+      <z2-m>  0.48343 </z2-m>
+    </axis>
+  </animation>
+  
   <!-- Rotation des roues lors du roulage -->
   <animation>
     <type>spin</type>
@@ -366,4 +558,3 @@
   </animation>
 
 </PropertyList>
-

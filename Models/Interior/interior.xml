@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="ISO-8859-1"?>
 
 <PropertyList>
 
@@ -9,6 +9,7 @@
     <object-name>interieur</object-name>
     <object-name>structure</object-name>
     <object-name>anneaux</object-name>
+    <object-name>siege</object-name>
     <object-name>supportvolant</object-name>
     <object-name>volant</object-name>
     <object-name>pedaleG</object-name>
@@ -18,18 +19,17 @@
     <object-name>intvitres</object-name>
   </animation>
 
-  <animation>
-    <type>shader</type>
-    <shader>chrome</shader>
-    <texture>Aircraft/Generic/Effects/glass_shader.png</texture>
+  <!-- working for Rembrandt -->
+  <effect>
+    <inherits-from>Aircraft/Deperdussin/Models/Effects/Glass/glass</inherits-from>
     <object-name>intvitres</object-name>
-  </animation>
-
-  <animation>
-    <type>noshadow</type>
+  </effect>
+  
+  <effect>
+    <inherits-from>Effects/model-transparent</inherits-from>
     <object-name>intvitres</object-name>
-  </animation>
-
+  </effect>
+  
   <!-- Planches de bord -->
   <model>
     <path>Aircraft/Deperdussin/Models/Interior/Panel/panel.xml</path>
@@ -134,4 +134,3 @@
   </animation> 
 
 </PropertyList>
-
