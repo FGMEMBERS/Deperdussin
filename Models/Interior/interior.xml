@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <path>interior.ac</path>
+
+  <animation>
+    <!-- Objets opaques -->
+    <object-name>interieur</object-name>
+    <object-name>structure</object-name>
+    <object-name>anneaux</object-name>
+    <object-name>siege</object-name>
+    <object-name>supportvolant</object-name>
+    <object-name>volant</object-name>
+    <object-name>pedaleG</object-name>
+    <object-name>pedaleD</object-name>
+
+    <!-- Objets transparents -->
+    <object-name>intvitres</object-name>
+  </animation>
+
+  <!-- working for Rembrandt -->
+  <effect>
+    <inherits-from>Aircraft/Deperdussin/Models/Effects/Glass/glass</inherits-from>
+    <object-name>intvitres</object-name>
+  </effect>
+  
+  <effect>
+    <inherits-from>Effects/model-transparent</inherits-from>
+    <object-name>intvitres</object-name>
+  </effect>
+  
+  <!-- Planches de bord -->
+  <model>
+    <path>Aircraft/Deperdussin/Models/Interior/Panel/panel.xml</path>
+    <offsets>
+      <x-m> -1.253 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m>  0.639 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Pilote -->
+  <model>
+    <name>Pilote</name>
+    <path>Aircraft/Deperdussin/Models/Pilot/pilot.xml</path>
+    <offsets>
+      <x-m> -0.901 </x-m>
+      <y-m>  0.018 </y-m>
+      <z-m> -0.051 </z-m>
+    </offsets>
+  </model>
+
+  <!-- profondeur -->
+  <animation>
+    <name>VolantComplet</name>
+    <object-name>supportvolant</object-name>
+    <object-name>volant</object-name>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>VolantComplet</object-name>
+    <property>surface-positions/elevator-pos-norm</property>
+    <factor> -15 </factor>
+    <center>
+      <x-m> -1.007 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m>  0.079 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <!-- ailerons -->
+  <animation>
+    <type>rotate</type>
+    <object-name>volant</object-name>
+    <property>surface-positions/aileron-pos-norm</property>
+    <factor> -70 </factor>
+    <center>
+      <x-m> -0.952 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m>  0.519 </z-m>
+    </center>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>pedaleG</object-name>
+    <property>surface-positions/rudder-pos-norm</property>
+    <interpolation>
+      <entry><ind> -1 </ind><dep> -45 </dep></entry>
+      <entry><ind>  1 </ind><dep>  30 </dep></entry>
+    </interpolation>
+    <center>
+      <x-m> -1.460 </x-m>
+      <y-m> -0.083 </y-m>
+      <z-m> -0.021 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation> 
+
+  <animation>
+    <type>rotate</type>
+    <object-name>pedaleD</object-name>
+    <property>surface-positions/rudder-pos-norm</property>
+    <interpolation>
+      <entry><ind> -1 </ind><dep>  45 </dep></entry>
+      <entry><ind>  1 </ind><dep> -30 </dep></entry>
+    </interpolation>
+    <center>
+      <x-m> -1.460 </x-m>
+      <y-m>  0.083 </y-m>
+      <z-m> -0.021 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation> 
+
+</PropertyList>
