@@ -18,6 +18,17 @@
       <cockpit type="int"> 2 </cockpit>
       <model type="int">   4 </model>
     </rating>
+
+    <tags>
+      <tag>1910s</tag>
+      <tag>racer</tag>
+      <tag>trainer</tag>
+      <tag>fixed-gear</tag>
+      <tag>tail-dragger</tag>
+      <tag>piston</tag>
+      <tag>single-engine</tag>
+      <tag>fixed-pitch</tag>
+    </tags>
     
   </sim>
 
